@@ -253,6 +253,7 @@ export type OnShouldStartLoadWithRequest = (
 
 export interface CommonNativeWebViewProps extends ViewProps {
   cacheEnabled?: boolean;
+  contextMenuEnable?: boolean;
   incognito?: boolean;
   injectedJavaScript?: string;
   injectedJavaScriptBeforeContentLoaded?: string;
@@ -1100,6 +1101,11 @@ export interface WebViewSharedProps extends ViewProps {
    * Should caching be enabled. Default is true.
    */
   cacheEnabled?: boolean;
+
+  /**
+   * Should context meny be enabled. Default is true.
+   */
+  contextMenuEnabled?: boolean;
 
   /**
    * Append to the existing user-agent. Overridden if `userAgent` is set.

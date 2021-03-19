@@ -65,6 +65,7 @@ This document lays out the current public properties and methods for the React N
 - [`allowFileAccess`](Reference.md#allowFileAccess)
 - [`saveFormDataDisabled`](Reference.md#saveFormDataDisabled)
 - [`cacheEnabled`](Reference.md#cacheEnabled)
+- [`contextMenuEnabled`](Reference.md#contextMenuEnabled)
 - [`cacheMode`](Reference.md#cacheMode)
 - [`pagingEnabled`](Reference.md#pagingEnabled)
 - [`allowsLinkPreview`](Reference.md#allowsLinkPreview)
@@ -1196,6 +1197,16 @@ Sets whether WebView should use browser caching.
 | Type    | Required | Default | Platform            |
 | ------- | -------- | ------- | ------------------- |
 | boolean | No       | true    | iOS, Android, macOS |
+
+---
+
+### `contextMenuEnabled`[⬆](#props-index)<!-- Link generated with jump2header -->
+
+Sets whether WebView should display the context menu during text selection.
+
+| Type    | Required | Default | Platform            |
+| ------- | -------- | ------- | ------------------- |
+| boolean | No       | true    | iOS, Android        |
 
 ---
 

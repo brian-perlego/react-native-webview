@@ -191,8 +191,10 @@ static NSDictionary* customCertificatesForHost;
                                                    name:UIWindowDidBecomeHiddenNotification
                                                  object:nil];
 
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:UIMenuControllerDidShowMenuNotification object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:UIMenuControllerWillShowMenuNotification object:nil];
+  if (!_contextMenuEnabled)
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:UIMenuControllerDidShowMenuNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:UIMenuControllerWillShowMenuNotification object:nil];
+  }
   }
 #endif // !TARGET_OS_OSX
   return self;

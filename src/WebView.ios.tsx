@@ -58,6 +58,7 @@ class WebView extends React.Component<IOSWebViewProps, State> {
   static defaultProps = {
     javaScriptEnabled: true,
     cacheEnabled: true,
+    contextMenuEnabled: true,
     originWhitelist: defaultOriginWhitelist,
     useSharedProcessPool: true,
   };
@@ -155,13 +156,7 @@ class WebView extends React.Component<IOSWebViewProps, State> {
    * Change the color of the selection tool
    * works only with hex color format '#000000'
    */
-  setSelectionColor = (data: string) => {
-    UIManager.dispatchViewManagerCommand(
-      this.getWebViewHandle(),
-      this.getCommands().setSelectionColor,
-      [data],
-    );
-  };
+  setSelectionColor = (data: string) => data;
 
   /**
    * Injects a javascript string into the referenced WebView. Deliberately does not
